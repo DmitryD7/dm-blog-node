@@ -18,7 +18,7 @@ app.set('view engine', 'ejs');
 
 mongoose
     .connect(process.env.MONGO_URL, {useNewUrlParser: true})
-    .then(res => console.log(successMsg('Connected to db')))
+    .then(() => console.log(successMsg('Connected to db')))
     .catch(error => console.log(errorMsg(error)));
 
 app.listen(process.env.PORT || 3000, 'localhost', (error) => {
